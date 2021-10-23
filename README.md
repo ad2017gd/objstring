@@ -86,8 +86,8 @@ typedef struct _stringcollection {
 	void (*remove)(size_t index);
 	// Insert string at index
 	void (*insert)(string string, size_t index);
-    // Append string
-    void (*append)(string string);
+    	// Append string
+    	void (*append)(string string);
 	// Call passed function with string and index arguments
 	void (*foreach)(void (*function)(string string, size_t index));
 } stringcollection;
