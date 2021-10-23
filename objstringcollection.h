@@ -1,0 +1,26 @@
+#pragma once
+
+#include "objstring.h"
+
+typedef struct _stringcollection {
+    string* items;
+	size_t length;
+
+	// Free the string collection
+	void (*free)();
+	// Set string at index
+	void (*set)(string string, size_t index);
+	// Remove string at index
+	void (*remove)(size_t index);
+	// Insert string at index
+	void (*insert)(string string, size_t index);
+    // Append string
+    void (*append)(string string);
+	// Call passed function with string and index arguments
+	void (*foreach)(void (*function)(string string, size_t index));
+} stringcollection;
+
+
+stringcollection objstrcol(string* items, size_t count);
+
+#define initsc stringcollection* _this = (stringcollection*)s_this
