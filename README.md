@@ -75,7 +75,7 @@ typedef struct _string {
 
 ```c
 typedef struct _stringcollection {
-    string* items;
+    	string* items;
 	size_t length;
 
 	// Free the string collection
