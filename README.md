@@ -5,6 +5,9 @@ Object Oriented C String Library
 - [Example](#example)
 - [Structs](#structs)
 
+# Small note
+This library makes use of the standard C string library. It is not freestanding.
+
 # Basic usage
 To create an objstring, use `objstr(char*)`. To create a string collection, use `objstrcol(string*,size_t)`.
 
